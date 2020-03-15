@@ -1,0 +1,50 @@
+
+.contactContainer{
+  justify-content: center;
+  text-align: center;
+  margin: 10px 10%;
+  color:#2B0057;
+  max-width: 2000px;
+}
+
+.contactContainer .titleBox{padding-bottom: 50px;}
+.contactContentBox .row{margin: 0; text-align: justify;}
+
+body > div.contactContainer > div.localization > div{margin: 0;}
+.photo{ align-items: center; max-width:600px; height:auto; }
+
+body > div.contactContainer > div.localization > div > div:nth-child(1) > div > img{
+  width: 100%;height: 100%;box-shadow: 0 20px 50px rgba(43, 0, 87, .5);border-radius: 25px;}
+body > div.contactContainer > div.localization > div > div:nth-child(2) > div{
+    max-width:600px;;
+  height: 100%;
+}
+body > div.contactContainer > div.localization > div > div:nth-child(2) > div > iframe{
+  width: 100%;  height: 100%;
+  box-shadow: 0 20px 50px rgba(43, 0, 87, .5);
+  border-radius: 25px;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media  only screen and (max-width:600px) {
+#contact{margin-top: 55px;}
+}
+@media  only screen and (min-width:601px) and (max-width:767px) {
+  #contact{margin-top: 90px;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact{margin-top: 120px;}
+}
+
+@media  only screen and (min-width: 992px) and (max-width: 1199px) {
+#contact{margin-top: 135px;}
+}
+@media  only screen and (min-width:1199px) {
+#contact{margin-top:  150px;}
+
+}

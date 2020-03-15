@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-p" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mediação Imobiliária Lda</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/raisingTheProperty.css">
+  <link rel="stylesheet" href="../css/mobile/maxWidth600px.css">
+  <link rel="stylesheet" href="../css/mobile/minWidth600px.css">
+  <link rel="stylesheet" href="../css/minWidth992px.css">
+  <link rel="stylesheet" href="../css/minWidth768px.css">
+  <link rel="stylesheet" href="../css/minWidth1200px.css">
+  <!--icons -->
+  <link rel="icon" href="../images/favicon_XYZ.ico">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Ubuntu&display=swap" rel="stylesheet">
+  <!--bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="../index.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">
+        <div class="layersContainer">
+          <img src="../images/xyz.png" alt="logotipo">
+          <img src="../images/xyz.png" alt="logotipo">
+          <img src="../images/xyz.png" alt="logotipo">
+          <img src="../images/xyz.png" alt="logotipo">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Início <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Imóveis
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="raisingTheProperty.html">Vender</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="propertySearch.html">Pesquisar</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html" tabindex="-1" aria-disabled="true">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Quem somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html" tabindex="-1" aria-disabled="true">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <h5><i class="fa fa-phone" style="font-size:48px;color:#2b0057"></i>XXX YYY ZZZ</h5>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <hr>
+  <form id="fieldContainer" action="mailto:pflsbarbosa@gmail.com" accept-charset="ISO-8859-1" method="post" enctype="text/plain">
+    <div id="titleLine" class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h5 class="titleBox">Ficha do imóvel para oferta</h5>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <input id="animatedBtn" type="submit"class="btn" name="" value="Submeter ficha">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipo de Imóvel</div>
+            <select id="propertyType" name="propertyType">
+              <option value="apartment">Escolha o tipo de imóvel</option>
+              <option value="apartment">Apartamento</option>
+              <option value="house">Moradia/Vivenda</option>
+              <option value="ground">Terreno</option>
+              <option value="farm">Quinta</option>
+              <option value="building">Predio</option>
+              <option value="warehouse">Armazém</option>
+              <option value="store">Loja</option>
+              <option value="office">Escritório</option>
+              <option value="industry">Indústria</option>
+              <option value="garage">Garagem</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Distrito</div>
+            <select id="district" name="district">
+              <option value="aveiro">Aveiro</option>
+              <option value="beja">Beja</option>
+              <option value="braga">Braga</option>
+              <option value="braganca">Bragança</option>
+              <option value="casteloBranco">Castelo Branco</option>
+              <option value="coimbra">Coimbra</option>
+              <option value="corvo">Corvo</option>
+              <option value="evora">Évora</option>
+              <option value="faial">Faial</option>
+              <option value="faro">Faro</option>
+              <option value="flores">Flores</option>
+              <option value="graciosa">Graciosa</option>
+              <option value="guarda">Guarda</option>
+              <option value="leiria">Leiria</option>
+              <option value="lisboa">Lisboa</option>
+              <option value="Madeira">Madeira</option>
+              <option value="pico">Pico</option>
+              <option value="portalegre">Portalegre</option>
+              <option value="porto">Porto</option>
+              <option value="portoSanto">Porto Santo</option>
+              <option value="santaMaria">Santa Maria</option>
+              <option value="santarem">Santarém</option>
+              <option value="saoJorge">São Jorge</option>
+              <option value="saoMiguel">São Miguel</option>
+              <option value="setubal">Setúbal</option>
+              <option value="terceira">Terceira</option>
+              <option value="vianaDoCastelo">Viana do Castelo</option>
+              <option value="vilaReal">Vila ReaL</option>
+              <option value="viseu">Viseu</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Estado do Imóvel</div>
+            <select id="propertyState" name="propertyState">
+              <option value="new">Novo</option>
+              <option value="used">Usado</option>
+              <option value="underConstruction">Em construção</option>
+              <option value="inProject">Em projecto</option>
+              <option value="demolishAndRebuild">Demolir e reconstruir</option>
+              <option value="unrecovered">Por recuperar</option>
+              <option value="recovered">Recuperado</option>
+              <option value="renovated">Renovado</option>
+              <option value="otherStates">Outros estados</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipologia</div>
+            <select id="propertyType" name="propertyType">
+              <option value="msgBedroom">Escolha o número de quartos</option>
+              <option value="zeroBedroom">0 quartos</option>
+              <option value="oneBedroom">1 quarto</option>
+              <option value="twoBedrooms">2 quartos</option>
+              <option value="threeBedroom">3 quartos</option>
+              <option value="fourBedroms">4 quartos</option>
+              <option value="fiveBedroms">5 quartos</option>
+              <option value="sixBedroms">6 quartos</option>
+              <option value="seveBedroms">7 quartos</option>
+              <option value="eightBedroms">8 quartos</option>
+              <option value="nineBedroms">9 quartos</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Concelho</div>
+            <select id="county" name="county">
+              <option value="amarante">Amarante</option>
+              <option value="baiao">Baião</option>
+              <option value="felgueiras">Felgueiras</option>
+              <option value="gondomar">Gondomar</option>
+              <option value="lousada">Lousada</option>
+              <option value="maia">Maia</option>
+              <option value="marcoDeCanaveses">Marco de Canaveses</option>
+              <option value="matosinhos">Matosinhos</option>
+              <option value="paçosDeFerreira">Paços de Ferreira</option>
+              <option value="paredes">Paredes</option>
+              <option value="penafiel">Penafiel</option>
+              <option value="porto">Porto</option>
+              <option value="povoaDeVarzim">Póvoa de Varzim</option>
+              <option value="santoTirso">Santo Tirso</option>
+              <option value="trofa">Trofa</option>
+              <option value="valongo">Valongo</option>
+              <option value="vilaDoConde">Vila do Conde</option>
+              <option value="vilaNovaDeGaia">Vila Nova de Gaia</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipo de transação</div>
+            <select id="transactionType" name="transactionType">
+              <option value="lease">Arrendamento</option>
+              <option value="exchange">Permuta</option>
+              <option value="trespass">Trespasse</option>
+              <option value="leaseAndTrespass">Arrendamento/Trespasse</option>
+              <option value="sale">Venda</option>
+              <option value="saleAndlease">Venda/Arrendamento</option>
+              <option value="saleAndleaseAndExchange">Venda/Arrendamento/Permuta</option>
+              <option value="saleAndleaseAndTrespass">Venda/Arrendamento/Trespasse</option>
+              <option value="saleAndExchange">Venda/Permuta</option>
+              <option value="saleAndTrespass">Venda/Trespasse</option>
+              <option value="otherTransactionTypes">Outras transações</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Área</div>
+            <input id="area" type="number" name="area">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Freguesia</div>
+            <select id="parish" name="parish">
+              <option value="aldoar">Aldoar</option>
+              <option value="fozDoDouro">Foz do Douro</option>
+              <option value="nevogilde">Nevogilde</option>
+              <option value="bonfim">Bonfim</option>
+              <option value="campanha">Campanhã</option>
+              <option value="cedofeita">Cedofeita</option>
+              <option value="santoIldefonso">Santo Ildefonso</option>
+              <option value="se">Sé</option>
+              <option value="miragaia">Miragaia</option>
+              <option value="saoNicolau">São Nicolau</option>
+              <option value="vitoria">Vitória</option>
+              <option value="lordeloDoOuro">Lordelo do Ouro</option>
+              <option value="massarelos">Massarelos</option>
+              <option value="paranhos">Paranhos</option>
+              <option value="ramalde">Ramalde</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Quantia</div>
+            <input id="amount" type="number" name="amount">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="commentBox">
+          <div class="fieldName">Comentário</div>
+          <textarea rows="2"col="250" onfocus="this.value=''" placeholder="Escreva aqui mais informações sobre o imóvel." name="comment"></textarea>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Nome</div>
+          <input type="text"placeholder="Escreva aqui o seu 1º e último nome" name="name">
+        </div>
+      </div>
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Contacto móvel</div>
+          <input type="text" placeholder="Escreva aqui o seu telemóvel" name="cellphone">
+        </div>
+      </div>
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">E-mail</div>
+          <input type="text" placeholder="Escreva aqui o seu e-mail" name="email">
+        </div>
+      </div>
+    </div>
+  </form>
+  <div id="contact" class="bottom-container">
+
+    <div class="row">
+      <div id="getInTouch" class="col-lg-4 col-md-4 col-sm-4">
+        <h5>Contacte-nos</h5>
+        <a class="myLink" href="mailto:someoneelse@gmail.com">email</a>
+        <a class="myLink" href="../public/recruitment.html">recrutamento</a>
+      </div>
+      <div id="followUs" class="col-lg-4 col-md-4 col-sm-4">
+        <h5>Follow us</h5>
+        <a class="myLink" onclick="window.open('https://www.linkedin.com/company/remax-pinheiro-manso/')">LinkedIn</a>
+        <a class="myLink" onclick="window.open('https://www.facebook.com/events/2566923426876148/')">FaceBook</a>
+      </div>
+      <div id="local" class="col-lg-4 col-md-4 col-sm-4 invisiblePrint">
+        <h5>Localização</h5>
+        <a class="myLink" onclick="window.open('https://goo.gl/maps/w9ypgL5qgGyWrXNw6')">Endereço</a>
+      </div>
+    </div>
+    <p id="copyright">
+      <script>
+        fullYear()
+      </script>
+    </p>
+  </div>
+</body>
+</html>

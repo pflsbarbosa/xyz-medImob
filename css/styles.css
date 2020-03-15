@@ -1,0 +1,74 @@
+html, body {  font-family: 'Roboto Mono', monospace; height: 100%; }
+body > ul{margin-top:5px; margin-left: 380px; }
+body { background: white; font-size: 15px; color:#2b0057;  line-height: 1.64; margin: 0; padding: 0; }
+h1 { font-size: 30px;}
+h2{font-size:22px;}
+h3, h4, h5, h6, strong, b { font-size: 17px; }
+
+
+.text-section { padding-left: 0; margin-left: 0; margin-right: 0; height: 300px; text-align: justify; font-size: 20px; }
+/* font-family: 'Roboto Mono', monospace; */
+/* font-family: 'Ubuntu', sans-serif;   */
+
+#header_section{ height: auto;}
+#navbarSupportedContent > ul > li:nth-child(6) > h5{margin-left: 50px;}
+
+/* navbar menu */
+#header_section  a {color:#2b0057;}
+.navbar{margin-top: 0.5%;}
+#navbarSupportedContent > ul > .nav-item{padding-top: 25px;}
+#navbarSupportedContent > ul > li:nth-child(7) > h5{padding-left: 75px;top: 0;}
+#header_section > nav{margin-top: 0;padding-top: 0;padding-bottom: 0;}
+#header_section > nav > button{position: relative;z-index: 999;}
+/* layersContainer */
+.layersContainer{
+  position: relative;
+  width: 450px;
+  height: 150px;
+  margin-top: 0;
+  transform: rotate(-0deg)skew(0deg)scale(.8);
+  transition: 0.5s;
+  z-index: 998;
+}
+.layersContainer img {
+  position: absolute;
+  width: 100%;
+  transition: 0.5s;
+  height: 100%;
+
+}
+.layersContainer:hover img:nth-child(4) {
+  transform: translate(-160px, 160px);
+  opacity: 1;
+}
+.layersContainer:hover img:nth-child(3) {
+  transform: translate(-120px, 120px);
+  opacity: .8;
+}
+.layersContainer:hover img:nth-child(2) {
+  transform: translate(-80px, 80px);
+  opacity: .6;
+}
+.layersContainer:hover img:nth-child(1) {
+  transform: translate(-40px, 40px);
+  opacity: .4;
+}
+
+
+/* Footer/ Bottom-container --------------------------------------------------------- */
+.bottom-container > a:hover{color: white; }
+.bottom-container { background-color: #2b0057;color: #ffffff; padding: 50px 0 20px; }
+.bottom-container > .row {line-height:100px;  text-align:center;}
+
+/*  links   +++++++++++++++++++++++++++++++++++++++++++++++++ */
+  #local > a{color: orange;cursor: pointer;}
+ .myLink, #local, #followUs > a  {color: orange;}
+ .myLink:hover, #local, #followUs > a:hover  { color: white; text-decoration: none; cursor: pointer; }
+/* getInTouch */
+#getInTouch > a:nth-child(2){margin-right: 30px;}
+ /*  Linkedin */
+#contact > div > div:nth-child(2) > a:nth-child(2){margin-right: 30px;}
+ /*  Resume/CV.pdf */
+#contact > div > div:nth-child(3) > svg {margin-right: 30px;}
+#contact > hr {display:none;}
+#copyright { color: #EAF6F6; font-size: 0.85rem; text-align: center; margin: 0 auto; }
