@@ -1,0 +1,8 @@
+body{background-color: skyblue;}
+li{ list-style-type: none;}
+a  {color:#21243d; font-weight: 1000;}
+a:hover{color:aquamarine;font-weight: 1000;text-decoration: none; text-shadow: 1.5px 1.1px 1.4px black;}
+#aBtn{box-shadow: 5px 5px darkcyan; padding: 5px; border-style: double; border-radius: 10px; background-color: white ; color:#21243d;text-decoration: none;}
+#aBtn:hover{background-color: #21243d; color:white}
+.jumbotron-fluid {background-color: skyblue;}
+ 

@@ -1,0 +1,63 @@
+<%- include("header") -%>
+  <hr>
+  <div class="titleContent">
+    <h2>Recrutamento | Oferta de emprego:</h2>
+    <p>Procuramos candidato(s) com forte empenho e motivação para integrar(em) as nossas equipas de Private Brokers nos escritórios do Porto.</p>
+  </div>
+  <form id="fieldContainer" action="mailto:pflsbarbosa@gmail.com" accept-charset="ISO-8859-1" method="post" enctype="text/plain">
+    <div id="titleLine" class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <h5 class="titleBox">Ficha de candidatura:</h5>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-9">
+        <a id=animationBtnBorder class="btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+            <input type="submit" name="" value="Submeter ficha">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Nome</div>
+          <input type="text" placeholder="Escreva aqui o seu 1º e último nome" name="name">
+        </div>
+      </div>
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Contacto móvel</div>
+          <input type="text" placeholder="Escreva aqui o seu telemóvel" name="cellphone">
+        </div>
+      </div>
+      <div class="ccol-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">E-mail</div>
+          <input type="text" placeholder="Escreva aqui o seu e-mail" name="email">
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="commentBox">
+          <div class="fieldName">Comentário</div>
+          <textarea rows="2" col="250" onfocus="this.value=''" placeholder="Escreva aqui mais informações sobre o imóvel." name="comment"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id=fieldBoxFileUpload class="fieldBox">
+        <div class="fieldName">Envie o seu CV no formato pdf:</div>
+        <input type="file" id="resume" name="resume" accept="pdf/*">
+        <script>
+          var recruitmentUploadFile = document.getElementById("resume").files[0];
+        </script>
+      </div>
+    </div>
+
+  </form>
+
+<%- include("footer") -%>

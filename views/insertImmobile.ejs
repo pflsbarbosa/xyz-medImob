@@ -1,0 +1,313 @@
+<%- include("header") -%>
+
+<body>
+
+
+  <form id="fieldContainer" action="/insertImmobile" enctype="multipart/form-data" method="post">
+
+    <div id="titleLine" class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h5 class="titleBox">Ficha do imóvel para oferta</h5>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <input id="animatedBtn" type="submit" class="btn" name="" value="Submeter ficha">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipo de Imóvel</div>
+            <select id="immobileType" name="immobileTypeOption">
+              <option value="apartment">Escolha o tipo de imóvel</option>
+              <option value="apartment">Apartamento</option>
+              <option value="house">Moradia/Vivenda</option>
+              <option value="ground">Terreno</option>
+              <option value="farm">Quinta</option>
+              <option value="building">Predio</option>
+              <option value="warehouse">Armazém</option>
+              <option value="store">Loja</option>
+              <option value="office">Escritório</option>
+              <option value="industry">Indústria</option>
+              <option value="garage">Garagem</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Distrito</div>
+
+            <select onchange="populateSelectCounties()" id="district" name="district">
+              <option value="0">-Selecione o distrito-</option>
+              <option value="Aveiro">Aveiro</option>
+              <option value="Beja">Beja</option>
+              <option value="Braga">Braga</option>
+              <option value="Bragança">Bragança</option>
+              <option value="Castelo Branco">Castelo Branco</option>
+              <option value="Coimbra">Coimbra</option>
+              <option value="Corvo">Corvo</option>
+              <option value="Évora">Évora</option>
+              <option value="Faial">Faial</option>
+              <option value="Faro">Faro</option>
+              <option value="Flores">Flores</option>
+              <option value="Graciosa">Graciosa</option>
+              <option value="Guarda">Guarda</option>
+              <option value="Leiria">Leiria</option>
+              <option value="Lisboa">Lisboa</option>
+              <option value="Madeira">Madeira</option>
+              <option value="Pico">Pico</option>
+              <option value="Portalegre">Portalegre</option>
+              <option value="Porto">Porto</option>
+              <option value="Porto Santo">Porto Santo</option>
+              <option value="Santa Maria">Santa Maria</option>
+              <option value="Santarém">Santarém</option>
+              <option value="São Jorge">São Jorge</option>
+              <option value="São Miguel">São Miguel</option>
+              <option value="Setúbal">Setúbal</option>
+              <option value="Terceira">Terceira</option>
+              <option value="Viana do Castelo">Viana do Castelo</option>
+              <option value="Vila ReaL">Vila ReaL</option>
+              <option value="Viseu">Viseu</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Estado do Imóvel</div>
+            <select id="immobileState" name="immobileState">
+              <option value="new">Novo</option>
+              <option value="used">Usado</option>
+              <option value="underConstruction">Em construção</option>
+              <option value="inProject">Em projecto</option>
+              <option value="demolishAndRebuild">Demolir e reconstruir</option>
+              <option value="unrecovered">Por recuperar</option>
+              <option value="recovered">Recuperado</option>
+              <option value="renovated">Renovado</option>
+              <option value="otherStates">Outros estados</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipologia</div>
+            <select id="tipology" name="tipology">
+              <option value="msgBedroom">Escolha o número de quartos</option>
+              <option value="T0">0 quartos</option>
+              <option value="T1">1 quarto</option>
+              <option value="T2">2 quartos</option>
+              <option value="T3">3 quartos</option>
+              <option value="T4">4 quartos</option>
+              <option value="T5">5 quartos</option>
+              <option value="T6">6 quartos</option>
+              <option value="T7">7 quartos</option>
+              <option value="T8">8 quartos</option>
+              <option value="T9">9 quartos</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Concelho</div>
+            <select id="county" onchange="populateParishes()" name="county">
+              <option value="0">Selecione o concelho</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Tipo de transação</div>
+            <select id="transactionType" name="transactionType">
+              <option value="lease">Arrendamento</option>
+              <option value="exchange">Permuta</option>
+              <option value="trespass">Trespasse</option>
+              <option value="leaseAndTrespass">Arrendamento/Trespasse</option>
+              <option value="sale">Venda</option>
+              <option value="saleAndlease">Venda/Arrendamento</option>
+              <option value="saleAndleaseAndExchange">Venda/Arrendamento/Permuta</option>
+              <option value="saleAndleaseAndTrespass">Venda/Arrendamento/Trespasse</option>
+              <option value="saleAndExchange">Venda/Permuta</option>
+              <option value="saleAndTrespass">Venda/Trespasse</option>
+              <option value="otherTransactionTypes">Outras transações</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxLeft" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Área</div>
+            <input id="area" type="number" name="area">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxCenter" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Freguesia</div>
+            <select id="parish" name="parish">
+              <option value="0">Selecione a freguesia</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div id="fieldBoxRight" class="fieldBox">
+          <div class="fieldValue">
+            <div class="fieldName">Quantia</div>
+            <input id="amount" type="number" name="amount">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="commentBox">
+          <div class="fieldName">Comentário</div>
+          <textarea rows="2" col="250" onfocus="this.value=''"
+            placeholder="Escreva aqui mais informações sobre o imóvel." name="comment"></textarea>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Nome</div>
+          <input type="text" placeholder="Escreva aqui o seu 1º e último nome" name="name">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">Contacto móvel</div>
+          <input type="text" placeholder="Escreva aqui o seu telemóvel" name="cellphone">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="fieldBox">
+          <div class="fieldName">E-mail</div>
+          <input type="text" placeholder="Escreva aqui o seu e-mail" name="email">
+        </div>
+
+      </div>
+      <div class="imgsFiles">
+        <div>
+          <p class="btnLabel">Escolha as melhores imagens. Para selecionar mais do que uma foto mantenha pressionada a tecla
+            ctrl enquanto seleciona com o cursor do rato e clica:</p>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <input type="file" id="imgs" name="imgs" multiple>
+          </div>
+          <div class="col-75"></div>
+          <div class="TitlError">
+            <%= typeof msg != 'undefined' ? msg : '' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.core.js"></script>
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+  
+    
+  
+  //json convertion
+  jsondataPrint = `<%- JSON.stringify(jsondata) -%>`; //grabbing json data when html it's loaded 
+  jsondata = JSON.parse(jsondataPrint); //convert to object
+    
+    function populateSelectCounties() {
+      
+      var districSelectedByUser = document.getElementById('district').value;
+      var selectCounty = document.getElementById('county');
+      var selectParish = document.getElementById('parish');
+      
+      console.log('insideFunction=' + districSelectedByUser);
+      console.log("jsondataPrint=" + (jsondataPrint));
+      console.log('jsondata' + jsondata);
+      
+      var districtCounties = []
+      var uniqueCounties = [];
+      
+      jsondata.forEach(item => {
+        if (item.distrito == districSelectedByUser) {
+          
+          districtCounties.push(item.concelho)
+          
+        }
+      });
+      //distinct the counties
+      $.each(districtCounties, function (i, el) {
+        if ($.inArray(el, uniqueCounties) === -1) uniqueCounties.push(el);
+      });
+      
+      //console.log(uniqueCounties);
+      selectCounty.innerHTML = ''; //deleting old options
+      selectParish.innerHTML = '';
+      uniqueCounties.forEach(county => {
+        var option = document.createElement('option');
+        option.text = county.toString();
+        selectCounty.add(option);
+      });
+      
+    }
+    
+    function populateParishes() {
+      
+      var countySelectedbyUser = document.getElementById('county').value;
+      var selectParish = document.getElementById('parish');
+      var countyParishes = [];
+      var parishSplitter = [];
+      var parishesArray = [];
+      var uniqueParishes = [];
+      
+      jsondata.forEach(item => {
+        
+        if (item.concelho == countySelectedbyUser) {
+          parishSplitter = `${(item.freguesia)
+            .split('União das freguesias de ')
+            .join('').split(' e ')
+            .join(',').split(', ' )
+            .join(',')}`
+
+          parishesArray.push(parishSplitter.split(','))
+          
+          parishesArray.forEach(array => {
+            array.forEach(parish => {
+              countyParishes.push(parish)
+            })
+          })
+        }
+      });
+      //distinct the counties
+      $.each(countyParishes, function (i, el) {
+        if ($.inArray(el, uniqueParishes) === -1) uniqueParishes.push(el);
+      });
+      
+      //console.log(uniqueParishes);
+      selectParish.innerHTML = ''; //deleting old options
+      uniqueParishes.forEach(parish => {
+        var option = document.createElement('option');
+        option.text = parish.toString();
+        selectParish.add(option);
+      });
+    }
+  </script>
+</body>
+
+<%- include("footer") -%>

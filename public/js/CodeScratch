@@ -1,0 +1,174 @@
+
+app.get('/insertImmobile/:chosedOption' ,function (req, res) {
+  //   console.log(req.params); 
+  var country = countyParishes(req, res);
+  var splittedChosedOptionArray = req.params.chosedOption.split('&');
+  var typeOfOption = splittedChosedOptionArray[0];
+  var optionValue = splittedChosedOptionArray[1];
+  //storing values
+  var thisDistrict = '';
+  (typeOfOption == 'district') ? district = optionValue: '';
+  var counties = [];
+  counties = country.counties;
+
+  console.log(`The type of option chosed by user is ${splittedChosedOptionArray[0]} and the option value it is ${splittedChosedOptionArray[1]}`);
+  if (splittedChosedOptionArray[0] == 'district') {
+    console.log("the type of chosed option verified it´s district");
+    
+    
+    console.log('... ' + country.counties);
+   
+    
+    req.district=optionValue;
+    req.countyArray=country.counties;
+      res.render(__dirname + "/views/insertImmobile.ejs",{
+        district: optionValue,
+        countyArray: country.counties
+      });
+
+  } else if (splittedChosedOptionArray[0] == 'parish') {
+    res.render(__dirname + "/views/insertImmobile.ejs", {
+      district: thisDistrict,
+      countyArray: counties,
+      parishArray: country.parish
+    });
+  }
+
+});
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+parishes_Asynchronicity
+//----------------------------------------------------------//
+
+module.exports = getParishes;
+const express = require('express');
+const https = require('https');
+const app = express();
+const fs = require('fs');
+const document = require('html-element').document;
+const lodash = require('lodash');
+const HTMLParser = require('node-html-parser');
+const {
+    add
+} = require('lodash');
+
+/* <% ${data}.forEach(item =>{ %>
+    <option name=" <%= item %> "> <%= item %> </option>
+    <%  }) %>   */
+
+//more clean code?
+function getParishes(req, res) {
+    //req.params.chosedOption from app.get('/insertImmobile/:district',...
+    var splittedChosedOptionArray = req.params.chosedOption.split('&');
+    var typeOfOption = splittedChosedOptionArray[0];
+    var optionValue = splittedChosedOptionArray[1];
+    console.log('userChoice = ' + optionValue);
+
+    var countyParishes = new Array();
+    let parishesArray = [];
+    let parishSplitter = String.empty;
+    let districtCounties = [];
+
+    var jsondata = JSON.parse(require('fs').readFileSync('public/src/data/Portugal_District_Data/freguesias-metadata.json', 'utf8'))
+
+    jsondata.d.forEach(object => {
+        switch (typeOfOption) {
+            case 'district':
+                if (object.distrito == optionValue) {
+
+                    districtCounties.push(object.concelho);
+                    districtCounties = lodash.uniq(districtCounties);
+                }
+                break;
+            case 'county':
+                if (object.concelho == optionValue) {
+
+                    parishSplitter = `${(object.freguesia)
+                            .split('União das freguesias de ')
+                            .join('').split(' e ')
+                            .join(',').split(', ' )
+                            .join(',')}`
+
+                    parishesArray.push(parishSplitter.split(','))
+
+                    parishesArray.forEach(array => {
+                        array.forEach(parish => {
+                            countyParishes.push(parish)
+                        })
+                    })
+
+                    //  console.log('thisarray = ' + parishesArray);  
+                }
+                break;
+            case 'parish':
+
+                break;
+            default:
+                break;
+        }
+
+    })
+
+
+    console.log(districtCounties);
+    console.log(countyParishes);
+
+    return jsondata = {
+        counties: districtCounties,
+        parishes: countyParishes
+    }
+
+
+
+}
+
+
+//+++++++++++++++++++++Html-scripts-+++++++++++++++++//
+
+ 
+
+
+document.getElementById('district').addEventListener('select', dataJson('district'));//detects change?
+
+
+ selectDistrict.append($(`<option ></option>`).attr('value', entry.concelho).attr('id', entry.concelho).text(entry.concelho));
+
+ function getChosedDistrict() {
+      /* alert('distrito = '+ distrito);  */
+      districSelectedByUser = document.getElementById('district').value;
+      console.log('districSelectedByUser=' + districSelectedByUser);
+      return districSelectedByUser;
+    }
+
+ <% jsondata.d.forEach(item => { %>
+               if(item.distrito == ${districtChosed}) { 
+               var districtCounties=[]
+              districtCounties.push( item.concelho )
+              var unique = districtCounties.filter((v, i, a) => a.indexOf(v) === i);  
+               districtCounties = []; 
+               districtCounties.push(unique) ;
+               districtCounties.forEach(item =>{ 
+              <option name=" <%= item.concelho %> "> <%= item.concelho %> </option>
+               }) 
+               } 
+ <% }) %>  
+ jsondata.concelho.forEach(item => { 
+               if(item.distrito == districSelectedByUser) { 
+               var districtCounties=[]
+              districtCounties.push( item.concelho )
+              var unique = districtCounties.filter((v, i, a) => a.indexOf(v) === i);  
+               districtCounties = []; 
+               districtCounties.push(unique) ;
+               districtCounties.forEach(item =>{ 
+                select.append(`<option name="${item.concelho}">${item.concelho}</option>`) ;
+               }) 
+               } 
+              })   
+ 
+
+  jsondataPrint= `<%- JSON.stringify(jsondata.forEach(item =>{
+    if(item.concelho=='Porto') {
+      
+      console.log(item);
+    }
+  })) -%>`;

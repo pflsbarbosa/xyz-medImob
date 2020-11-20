@@ -1,0 +1,139 @@
+<%- include("header") -%>
+
+
+<body>
+
+
+    <% newImmobiles.forEach(function(immobile){ %>
+
+    <div class="container">
+        <article class="main-content">
+            <h3 class="immobileTitle">
+                <%=newImmobiles[0].immobileType %> T<%=newImmobiles[0].numberOfBedrooms %>
+                <%=newImmobiles[0].county %>-<%=newImmobiles[0].parish %>
+            </h3>
+            <div class="immobilePhotoShow">
+                <div class="row" id="mainHeigth">
+                    <form action="propertyFeatures/.." method="post" name="clickedPhoto"
+                        value="<%=newImmobiles[0]._id %>"></form>
+                    <div class="col-8" id="leftPhoto" onclick="immobilePhotoClick()">
+                        <% if(immobile.images[0].filename){  %>
+                        <img class="d-block w-100 center-block" data-slide-to="<%=immobile.images[0].filename%>"
+                            src="/src/images/uploads/<%=immobile.images[0].filename %>"
+                            alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                        <%  } else{  %>
+                                            <img class=" d-block w-100 center-block"
+                            data-slide-to="<%=immobile.images[0]%>" src="/src/images/uploads/<%=immobile.images[0]%>"
+                            alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                        <% }  %>                          
+                        </div>
+                    
+                    <div class=" col-4" id="rightPhoto">
+                        <table id="t01">
+                            <tr class="tr">
+                                <td>
+                                    <% if(immobile.images[2].filename){  %>
+                                    <img class="d-block w-100 center-block"
+                                        data-slide-to="<%=immobile.images[2].filename%>"
+                                        src="/src/images/uploads/<%=immobile.images[2].filename %>"
+                                        alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                            <%  } else{  %>
+                                    <img class=" d-block w-100 center-block" data-slide-to="<%=immobile.images[2]%>"
+                                        src="/src/images/uploads/<%=immobile.images[2]%>"
+                                        alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                            <% }  %>   
+                                        
+                                </td>
+                            </tr>
+                           
+                                    <tr>
+                                        <td>
+                                            <% if(immobile.images[1].filename){  %>
+                                            <img class=" d-block w-100 center-block"
+                                        data-slide-to="<%=immobile.images[1].filename%>"
+                                        src="/src/images/uploads/<%=immobile.images[1].filename %>"
+                                        alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                        <%  } else{  %>
+                                            <img class=" d-block w-100 center-block"
+                                        data-slide-to="<%=immobile.images[1]%>"
+                                        src="/src/images/uploads/<%=immobile.images[1]%>"
+                                        alt="<%=immobile.immobileType %>-<%=immobile.numberOfBedrooms %>-<%=immobile.county %>-<%=immobile.parish %>-<%=immobile.images.length %>" ">
+                                        <% }  %>   
+                                        </td>
+                                    </tr> 
+                        </table>
+                        
+                       
+                    </div>
+                    
+                </div>
+            </div>
+            <div class=" immobile-description">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="immobile-name">
+                                                <h3 class="immobileTitle">
+                                                    <%=newImmobiles[0].immobileType %>
+                                                    T<%=newImmobiles[0].numberOfBedrooms %>
+                                                    <%=newImmobiles[0].county %>-<%=newImmobiles[0].parish %>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <strong class="price"><%=newImmobiles[0].price %>&nbsp;€<br></strong>
+                                        </div>
+                                    </div>
+                    </div>
+                    <ul>
+                        <i class="fas fa-bed"></i><span>&nbsp
+                            &nbsp<strong><%=newImmobiles[0].numberOfBedrooms %></strong>&nbsp Quartos</span><br>
+                        <i class="fas fa-bath"></i><span>&nbsp &nbsp<strong><%=newImmobiles[0].wc %></strong>&nbsp Casas
+                            de banho</span><br>
+                        <img src="/src/images/favicon_area.ico"><span>&nbsp
+                            &nbsp<strong><%=newImmobiles[0].usefulArea %></strong><span>&nbsp;m</span><sup>2</sup><br>
+                    </ul>
+                    <div class="immobile-features">
+                        <h5>Características:</h5>
+                        <hr>
+                        <ul id="features-bullets">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12">
+                                    <li><span>&nbsp;&nbsp;<strong><%=newImmobiles[0].numberOfBedrooms %></strong>&nbsp;Quartos</span>
+                                    </li>
+                                    <li><span>&nbsp;&nbsp;<strong><%=newImmobiles[0].wc %></strong>&nbsp;wc</span></li>
+                                    <li><span>&nbsp;&nbsp;<strong><%=newImmobiles[0].usefulArea %></strong><span>&nbsp;m</span><sup>2</sup>
+                                    </li>
+                                </div>
+                                <div class="col-md-9 col-sm-12">
+                                    <li><span>&nbsp;&nbsp;<strong><%=newImmobiles[0].county %></strong>,
+                                            <%=newImmobiles[0].parish %></li>
+                                    <li><strong>&nbsp;&nbsp;Referência:
+                                        </strong><%=newImmobiles[0].referenceNumber %><span>&nbsp;</li>
+                                </div>
+
+                                <a
+                                    aria-label="comment"><strong>Comment:</strong>&nbsp;&nbsp;<%=newImmobiles[0].comment %></a>
+                            </div>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+        </article>
+    </div>
+    <script>
+           function immobilePhotoClick() {
+            location.replace('immobileCarousel/');
+        }
+    </script>
+    <% }); %>
+</body>
+
+
+
+
+
+
+
+<%- include("footer") -%>

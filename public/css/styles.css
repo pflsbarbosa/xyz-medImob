@@ -1,0 +1,12 @@
+html, body {  font-family: 'Roboto Mono', monospace;  }
+body > ul{margin-top:5px; margin-left: 380px; }
+body { background: white; font-size: 15px; color:#2b0057;  line-height: 1.64; margin: 0; padding: 0; }
+
+h1 { font-size: 30px;}
+h2{font-size:22px;}
+h3, h4, h5, h6, strong, b { font-size: 17px; }
+
+
+.text-section { padding-left: 0; margin-left: 0; margin-right: 0; height: 300px; text-align: justify; font-size: 20px; }
+/* font-family: 'Roboto Mono', monospace; */
+/* font-family: 'Ubuntu', sans-serif;   */

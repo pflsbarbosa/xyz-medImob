@@ -1,0 +1,82 @@
+<%- include("header") -%>
+<!-- Links -->
+<link rel="stylesheet" href="css/listingImmobiles.css">
+<!--bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Links End -->
+
+<div id="heading">
+  <h1> Listagem de imóveis </h1>
+</div>
+
+<div class="container">
+  <form action="listingImmobiles" method="post">
+
+    <% newImmobiles.forEach(function(immobile){ %>
+    <div class="row" id="listRow">
+      <div class="col-lg-1 col-md-1 col-sm-2 ">
+        <p class="checkItemPlus"><input type="checkbox" id="<%=immobile._id%>" name="checkBox"
+            value="<%=immobile._id%>"></p>
+      </div>
+      <div id="description" class="col-lg-4 col-md-4 col-sm-3">
+        <script>
+          function popup(t) {
+            var immob_Id = t.id;            
+          }
+        </script>
+        <a>
+          <label for="<%= immobile._id %>"><input type="submit" id="<%=immobile._id%>" name="immobLabelSelected"
+              onclick="popup(this)"
+              value="<%=immobile._id%>-<%=immobile.immobileType%>-T<%=immobile.numberOfBedrooms%>-<%=immobile.price+"€"%>-<%=immobile.contactName%>"></label>
+        </a>
+
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-7">
+        <%  for (var i = 0; i < immobile.images.length; i++) { %>
+        <% if(immobile.images[i].filename){  %>
+        <img src="src/images/uploads/<%= immobile.images[i].filename %>"
+          alt="<%=immobile.immobileType%>-<%=immobile.numberOfBedrooms %>-<%=immobile.images[i] %>">
+        <%  } else{  %>
+        <img src="src/images/uploads/<%= immobile.images[i] %>"
+          alt="<%=immobile.immobileType%>-<%=immobile.numberOfBedrooms %>-<%=immobile.images[i] %>">
+        <% }  %>
+
+        <%  } %>
+      </div>
+    </div>
+    <script>
+      document.getElementById('<%=immobile._id%>').addEventListener('change', function () {
+        if (this.checked) {
+          var answer = confirm(
+            "Tem a certeza que quer apagar este imóvel? \n Se não quer selecionar, cancele.\n Se deseja mesmo apagar, selecione ok e depois click no botão de apagar."
+          );
+          if (!answer) {
+            document.getElementById('<%=immobile._id%>').checked = false;
+          }
+        }
+      });
+    </script>
+    <% }); %>
+    <span>Inserir</span><button type="button" onclick="insertImmobileRedirectBtn()" class="myBtn"
+      name="insertButton">+</button>
+    <span>Apagar</span> <input type="submit" value="-" class="myBtn" id="myDelBtn" name="delBtn">
+    <div class="listingImmobilesMenu">
+      <ul>
+        <br><br>
+        
+        <a id="aBtn" type="button" href='index'>Sair da área administrativa</a>
+      </ul>
+
+
+    </div>
+  </form>
+
+</div>
+</div>
+
+</div>
+
+
+
+<%- include("footer") -%>

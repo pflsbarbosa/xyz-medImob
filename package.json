@@ -1,0 +1,40 @@
+{
+  "name": "xyz-medimob",
+  "version": "1.0.1",
+  "description": "This is the full-stack-project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pflsbarbosa/xyz-medImob.git"
+  },
+  "author": "Paulo Barbosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pflsbarbosa/xyz-medImob/issues"
+  },
+  "homepage": "https://github.com/pflsbarbosa/xyz-medImob#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "file-system": "^2.2.2",
+    "html-element": "^2.3.1",
+    "jsdom": "^16.2.2",
+    "lodash": "^4.17.19",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.10",
+    "mongoose-encryption": "^2.0.2",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "node-html-parser": "^1.2.16",
+    "nodejs": "0.0.0",
+    "promise": "^8.1.0",
+    "short-uuid": "^4.1.0",
+    "uuid": "^8.3.0"
+  }
+}

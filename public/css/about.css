@@ -1,0 +1,14 @@
+
+#aboutUsText{
+  color: #2b0057 ;
+  margin-left: 10%;
+  padding: 15px;
+  margin-top: 10px;
+  text-align: center;
+  width:70%;
+  height: auto;
+}
+#aboutUsText{min-height: 400px;}
+#aboutUsText > h1,h3 {text-shadow: 0px 3px 4px #aaaaaa;}
+#aboutUsText div{margin: 0px;padding-top: 10px;}
+#apresentation{margin: 0;}

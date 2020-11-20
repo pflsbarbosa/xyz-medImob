@@ -1,0 +1,165 @@
+#contact {
+  width: 100%;
+  bottom: 0;
+  z-index: 998;
+  position: relative;
+}
+
+
+/* Footer/ Bottom-container --------------------------------------------------------- */
+.bottom-container>a:hover {
+  color: white;
+}
+
+.bottom-container {
+  background-color: #f4f6ff;
+  color: #ffffff;
+}
+
+h5 {
+  font-size: 0.2rem;
+  padding-right: 0px;
+}
+
+.centerDiv {
+  margin-left: 48%;
+  max-width: fit-content;
+}
+
+/* about us section */
+#aboutUs {
+  background-color: #16213e;
+  padding-top:1.5rem;
+  padding-bottom: 0.02rem;
+}
+
+#aboutUs>div>ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#aboutUs>div>ul>li {
+  list-style-type: none;
+}
+
+#aboutUs>div>ul>li>a {
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  margin-left: 0;
+}
+
+#aboutUs>div>ul>li>a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+/* followUs section */
+#followUs {
+  padding: 0.02rem 0;
+  background-color: #0f3460;
+}
+
+#followUs>div>a>svg {
+  margin: 5%;
+}
+
+
+#followUs>div>a>svg:hover {
+  color: white;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* local section */
+#local {
+  padding: 0.02rem 0;
+  background-color: #e94560;
+  color: white;
+}
+
+#local>div>h5>span>a>svg:hover>path {
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+#local>div>h5>span>a>svg {
+  margin-left: 50%;
+}
+
+
+
+#contact>hr {
+  display: none;
+}
+
+#copyright {
+  background-color: #16213e;
+  color: #EAF6F6;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width:600px) {
+
+  /* #contact{margin-bottom: 0; position: relative; } */
+  .centerDiv {
+    margin-left: 40%;
+    max-width: fit-content;
+  }
+  
+}
+
+@media only screen and (min-width:601px) and (max-width:767px) {
+
+  /* #contact{bottom: 0px; position: fixed;} */
+  .centerDiv {
+    margin-left: 45%;
+    max-width: fit-content;
+  }
+  
+}
+
+/* -------------------------------------------------------- */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+  /* #contact{bottom: 0px; position: fixed;} */
+  .centerDiv {
+    margin-left: 45%;
+    max-width: fit-content;
+  }
+
+}
+
+/* -------------------------------------------------------- */
+/* height >= 224px */
+/* -------------------------------------------------------- */
+@media only screen and ( min-height: 698px )  {
+    
+  /* about us section */
+#aboutUs {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+  /* followUs section */
+#followUs {
+  padding: 2rem 0;
+}
+/* local section */
+#local {
+  padding:2rem 0;
+}
+
+}
+
+
+
+

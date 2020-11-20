@@ -1,0 +1,68 @@
+#fieldContainer{
+  margin-left: 9%; width: 85%; height: auto; border-style: dotted;
+  border-color: #2b0057; margin-top: 50px; padding-bottom: 15px;background-color: #d7fffd;
+  color:  #2b0057;
+  border-radius: 15px;
+}
+#fieldContainer .btn{margin: 5px 0;background-color: #2b0057; color: white;}
+.titleBox{padding-top: 10px; padding-left: 20px;text-shadow: 0px 3px 4px #aaaaaa;}
+.fieldBox{ height: 70px;padding: 5px;}
+.fieldName{margin: 5px 0;}
+.fieldBox select {width: 100%;}
+
+#fieldContainer .commentBox{position: relative;z-index: 1;}
+.commentBox{width: 100%; height: 110px;padding:5px;}
+.commentBox textarea{height: 75px; width: 100%;}
+.fieldBox input{width: 100%;}
+#fieldContainer .row{margin: 0;}
+
+.center{
+  margin-left: 40%;
+  height: auto;
+}
+.TitlError{background-color: transparent;}
+
+#fieldContainer select,input,textarea {border-radius: 5px;}
+.policiesAgreement{margin:15px 5px;}
+#imgs{margin-left: 20px;margin-top: 20px;}
+/* #fieldContainer > div:nth-child(8) > input[type=checkbox]{margin: 5px; } */
+
+/* Animated btn */
+ #animatedBtn {
+  width: 170px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  animation: myfirst 3s 2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#referenceNumber{text-align: justify;font-size: 1px;display: inline;}
+
+ ::placeholder {opacity: 0.5;}
+ #boxGarage,#parkingSpace{ width: fit-content; margin-left: 1%;}
+@keyframes myfirst {
+  0% {
+    transform: translate(5px, 0px);
+  }
+  20% {
+    transform: translate(-5px, 0px);
+  }
+  40% {
+    transform: translate(5px, 0px);
+  }
+  60% {
+    transform: translate(-5px, 0px);
+  }
+  80% {
+    transform: translate(5px, 0px);
+  }
+  100% {
+    transform: translate(-5px, 0px);
+  }
+}
+/* End of animation icon */
+
+

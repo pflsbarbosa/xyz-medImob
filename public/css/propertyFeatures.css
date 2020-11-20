@@ -1,0 +1,54 @@
+
+#mainHeigth{
+    margin: 0;
+    min-height: 100%;       
+}
+
+#leftPhoto{
+    padding: 0 4px 0 0;    
+}
+#leftPhoto:hover{cursor: pointer;}
+
+#rightPhoto{padding: 0;
+}
+
+.immobilePhotoShow{ max-width: 500px;margin-left: 32%;}
+#leftPhoto > img{   
+    height: 340px;
+    width: auto;
+    bottom: 0;
+}
+/* right photos */
+#t01 > tbody > tr.tr > td > img{
+   padding-bottom: 4px;
+   height: 170px; 
+}
+#t01 > tbody > tr > td > img{height: 170px;}
+
+
+body > div.container > article > div > div > div.col-8 > div > img{
+    object-fit: cover;
+}
+
+.immobileTitle {
+    margin: 5px;
+    font-size: 200%;   
+    text-align: center; 
+}
+.immobile-name{margin-top: 10px; height: 100%;}
+
+.price {    
+    margin: 5px;
+    position: relative;
+    float: right;
+    padding-right: 0;
+    font-size: 200%;
+}
+#features-bullets{
+    list-style-position: outside;
+    list-style-type: circle;
+
+}
+.left-features{
+    padding-right: 100px;
+}

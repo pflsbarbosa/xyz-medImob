@@ -1,0 +1,25 @@
+
+  
+
+#termsConditionsText{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #2b0057 ;
+    margin-left: 15%;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center;
+    width:70%;
+    min-height: 500px;    
+  }
+  
+  #termsConditionsText > h1,h3 {text-shadow: 0px 3px 4px #aaaaaa;}
+  #termsConditionsText div{margin: 0px;padding-top: 10px;}
+  #termsConditionsInformation{margin: 0; text-align: justify;}
+  #disableCoockiesTutorialLink{
+      color:blue;
+  }
+  #disableCoockiesTutorialLink:hover{
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+  

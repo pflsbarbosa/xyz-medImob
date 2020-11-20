@@ -1,0 +1,114 @@
+.TitlError{
+  background-color:red; 
+  color: white;
+  width: fit-content;
+  height: 50px;
+  margin: 5px;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 10px;
+}
+#fieldContainer{
+  margin-left: 9%; width: 85%; height: auto; border-style: dotted;
+  border-color: #2b0057; margin-top: 50px; padding-bottom: 15px;background-color: #d7fffd;
+  color:  #2b0057;
+  border-radius: 15px;
+}
+#fieldContainer .btn{margin: 5px 0;background-color: #2b0057; color: white;}
+.titleBox{padding-top: 10px; padding-left: 20px;}
+.fieldBox{ height: 70px;padding: 5px;}
+.fieldName{margin: 5px 0;}
+.fieldBox select {width: 100%;}
+#fieldContainer .commentBox{position: relative;z-index: 1;}
+.commentBox{width: 100%; height: 110px;padding:5px;}
+.commentBox textarea{height: 75px; width: 100%;}
+.fieldBox input{width: 100%;}
+#fieldContainer .row{margin: 0;}
+#fieldContainer select,input,textarea {border-radius: 5px;}
+.imgsFiles{ width: fit-content; height: 100%; padding: 10px;
+  margin-left: 8px;
+}
+
+#fieldContainer > div:nth-child(6) > div.imgsFiles > div:nth-child(1) > p{margin: 2px;padding: 2px; font-size: 1rem;height: 100%;width: auto;}
+#fieldContainer > div:nth-child(6) > div.imgsFiles > div:nth-child(2) > div.col-25{height: 100%;width: auto;}
+
+input[type=file] {
+  margin-top: 5px;
+  background-color:  #2b0057;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right; 
+  opacity: 1;
+  transition: 0.3s;
+}
+
+input[type=file]:hover  {
+  opacity: 0.6;
+}
+
+
+/* Animated btn */
+ #animatedBtn { width: 170px; height: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  animation: myfirst 3s 2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.btn {
+  border: none;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity:0.6}
+
+@keyframes myfirst {
+  0% {
+    transform: translate(5px, 0px);
+  }
+  20% {
+    transform: translate(-5px, 0px);
+  }
+  40% {
+    transform: translate(5px, 0px);
+  }
+  60% {
+    transform: translate(-5px, 0px);
+  }
+  80% {
+    transform: translate(5px, 0px);
+  }
+  100% {
+    transform: translate(-5px, 0px);
+  }
+}
+/* End of animation icon */
+/*------------------------------------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media  only screen and (max-width:600px) {
+  #fieldContainer > div:nth-child(6) > div.imgsFiles{width: 100%;padding: 2px;}
+  #imgs{height: 100%;width: fit-content;display: flex; word-break: break-all;}
+  
+  }
+  @media  only screen and (min-width:601px) and (max-width:767px) {
+  
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  
+  }
+  
+  @media  only screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  }
+  @media  only screen and (min-width:1199px) {
+  
+  }
+  

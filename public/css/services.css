@@ -1,0 +1,92 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'sans-serif;
+}
+body > div.container > div{width:110% ;}
+/* four slides  */
+.container{
+  margin: 15px 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.cardContainer .cardBox {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  margin-right: 50px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #2b0057;
+  box-shadow: 0 20px 50px rgba(43, 0, 87, .5);
+  border-radius: 25px;
+}
+.cardContainer:hover .cardBox {
+  filter: blur(5px);
+  transform: scale(.6);
+}
+.cardContainer .cardBox:hover {
+  filter: blur(0px);
+  transform: scale(1);
+  border: 0;
+}
+.cardContainer .cardBox:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  transition: .5s;
+  border-radius: 25px;
+}
+.cardContainer .cardBox:hover:before{
+  background:#2b0057;
+  transform: scaleY(1.15);
+  box-shadow: 0 5px 15px rgba(0,0,0,.2);
+  border-radius: 25px;
+}
+.cardContainer .cardBox .cardContent {
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+  transition: .5s;
+}
+.cardContainer .cardBox:hover .cardContent {
+  color:#fff;
+}
+.cardContainer .cardBox .cardContent h2 {
+  font-size: 2em;
+  text-align: center;
+}
+.cardContainer .cardBox .cardContent p {
+  font-size: 1em;
+  text-align: center;
+}
+.cardContainer .cardBox .cardContent a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5 10px;
+  background: #262626;
+  color: #fff;
+  text-decoration: none;
+}
+.cardContainer .cardBox:hover .cardContent a {
+  background: #2196f3;
+}
